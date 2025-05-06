@@ -19,6 +19,8 @@
       skill_name: Python
     - class: ruby-plain
       skill_name: Ruby
+    - class: devicon-r-original
+      skill_name: R
 
 - name: databases
   skills:
