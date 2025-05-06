@@ -7,7 +7,7 @@
   skills:
     - class: python-plain
       skill_name: Python
-    - class: r-plain
+    - class: R-plain
       skill_name: R
     - class: matlab-plain
       skill_name: MATLAB
