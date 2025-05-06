@@ -1,16 +1,3 @@
-- name: web
-  skills:
-    - class: html5-plain
-      skill_name: HTML5
-    - class: css3-plain
-      skill_name: CSS3
-    - class: sass-plain
-      skill_name: SASS
-    - class: bootstrap-plain
-      skill_name: Bootstrap
-    - class: jquery-plain
-      skill_name: jQuery
-
 - name: languages
   skills:
     - class: javascript-plain
