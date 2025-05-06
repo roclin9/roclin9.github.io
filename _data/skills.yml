@@ -1,59 +1,67 @@
-const skillsData = [
-  {
-    name: "web",
-    skills: [
-      { type: "icon", class: "devicon-html5-plain", skill_name: "HTML5" },
-    ],
-  },
-  {
-    name: "languages",
-    skills: [
-      { type: "icon", class: "devicon-python-plain", skill_name: "Python" },
-      { type: "icon", class: "devicon-r-original", skill_name: "R" },
-      { type: "icon", class: "devicon-latex-original", skill_name: "LaTeX" },
-    ],
-  },
-  {
-    name: "databases",
-    skills: [
-      { type: "icon", class: "devicon-mysql-plain", skill_name: "MySQL" },
-    ],
-  },
-  {
-    name: "devops",
-    skills: [
-      { type: "icon", class: "devicon-git-plain", skill_name: "Git" },
-      { type: "icon", class: "devicon-github-plain", skill_name: "GitHub" },
-    ],
-  },
-];
-
-export default function SkillsSection() {
-  return (
-    <>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-      />
-      <div className="bg-yellow-100 p-6 rounded space-y-4">
-        {skillsData.map((section) => (
-          <div key={section.name}>
-            <h2 className="text-2xl font-serif mb-2">{section.name}:</h2>
-            <ul className="space-y-2">
-              {section.skills.map((skill) => (
-                <li key={skill.skill_name} className="flex items-center space-x-2">
-                  {skill.type === "icon" ? (
-                    <i className={`${skill.class} text-2xl`}></i>
-                  ) : (
-                    <img src={skill.src} alt={skill.skill_name} className="h-6" />
-                  )}
-                  <span className="text-lg font-light">{skill.skill_name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
+- name: languages
+   skills:
+     - class: javascript-plain
+       skill_name: JavaScript
+     - class: python-plain
+       skill_name: Python
+     - class: ruby-plain
+       skill_name: Ruby
+     - class: r-plain
+       skill_name: R
+     - class: matlab-plain
+       skill_name: MATLAB
+     - class: latex-plain
+       skill_name: LaTeX
+ 
+ - name: databases
+   skills:
+     - class: postgresql-plain
+       skill_name: Postgresql
+     - class: mongodb-plain
+       skill_name: MongoDB
+     - class: mysql-plain
+       skill_name: MySQL
+ 
+ - name: frontend frameworks
+   skills:
+     - class: react-plain
+       skill_name: React
+     - class: angularjs-plain
+       skill_name: Angular
+     - class: vuejs-plain
+       skill_name: Vue
+     - class: jekyll-plain
+       skill_name: Jekyll
+ 
+ - name: backend frameworks
+   skills:
+     - class: rails-plain
+       skill_name: Ruby-on-Rails
+     - class: express-original
+       skill_name: Express
+     - class: nodejs-plain
+       skill_name: NodeJS
+     - class: django-plain
+       skill_name: Django
+ 
+ - name: devops
+   skills:
+     - class: git-plain
+ @@ -61,17 +37,3 @@
+       skill_name: Heroku
+     - class: docker-plain
+       skill_name: Docker
+ 
+ - name: testing
+   skills:
+     - class: mocha-plain
+       skill_name: Mocha
+     - class: jasmine-plain
+       skill_name: Jasmine
+     - class: rspec-plain
+       skill_name: RSpec
+ 
+ - name: mobile
+   skills:
+     - class: react-original
+       skill_name: React Native
