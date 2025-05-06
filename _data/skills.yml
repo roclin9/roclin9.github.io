@@ -5,14 +5,13 @@
 
 - name: languages
   skills:
-    - class: python-plain
+    - class: devicon-python-plain
       skill_name: Python
-    - class: R-plain
+    - class: devicon-r-original
       skill_name: R
-    - class: matlab-plain
-      skill_name: MATLAB
-    - class: latex-plain
+    - class: devicon-latex-original
       skill_name: LaTeX
+
 
 - name: databases
   skills:
