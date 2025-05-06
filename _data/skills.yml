@@ -1,26 +1,59 @@
-- name: web
-  skills:
-    - class: html5-plain
-      skill_name: HTML5
+const skillsData = [
+  {
+    name: "web",
+    skills: [
+      { type: "icon", class: "devicon-html5-plain", skill_name: "HTML5" },
+    ],
+  },
+  {
+    name: "languages",
+    skills: [
+      { type: "icon", class: "devicon-python-plain", skill_name: "Python" },
+      { type: "icon", class: "devicon-r-original", skill_name: "R" },
+      { type: "icon", class: "devicon-latex-original", skill_name: "LaTeX" },
+    ],
+  },
+  {
+    name: "databases",
+    skills: [
+      { type: "icon", class: "devicon-mysql-plain", skill_name: "MySQL" },
+    ],
+  },
+  {
+    name: "devops",
+    skills: [
+      { type: "icon", class: "devicon-git-plain", skill_name: "Git" },
+      { type: "icon", class: "devicon-github-plain", skill_name: "GitHub" },
+    ],
+  },
+];
 
-- name: languages
-  skills:
-    - class: devicon-python-plain
-      skill_name: Python
-    - class: devicon-r-original
-      skill_name: R
-    - class: devicon-latex-original
-      skill_name: LaTeX
-
-
-- name: databases
-  skills:
-    - class: mysql-plain
-      skill_name: MySQL
-
-- name: devops
-  skills:
-    - class: git-plain
-      skill_name: Git
-    - class: github-plain
-      skill_name: GitHub
+export default function SkillsSection() {
+  return (
+    <>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      />
+      <div className="bg-yellow-100 p-6 rounded space-y-4">
+        {skillsData.map((section) => (
+          <div key={section.name}>
+            <h2 className="text-2xl font-serif mb-2">{section.name}:</h2>
+            <ul className="space-y-2">
+              {section.skills.map((skill) => (
+                <li key={skill.skill_name} className="flex items-center space-x-2">
+                  {skill.type === "icon" ? (
+                    <i className={`${skill.class} text-2xl`}></i>
+                  ) : (
+                    <img src={skill.src} alt={skill.skill_name} className="h-6" />
+                  )}
+                  <span className="text-lg font-light">{skill.skill_name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
