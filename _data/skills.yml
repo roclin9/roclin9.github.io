@@ -25,7 +25,3 @@
       skill_name: Git
     - class: github-plain
       skill_name: GitHub
-    - class: heroku-original
-      skill_name: Heroku
-    - class: docker-plain
-      skill_name: Docker
